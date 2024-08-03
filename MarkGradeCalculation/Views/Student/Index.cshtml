@@ -1,0 +1,57 @@
+﻿@model MarkGradeCalculation.Models.StudentMark
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>MArkGradeCalculation</h2>
+    <div class="row">
+        @using (Html.BeginForm("/Index", "StudentName",FormMethod.Post))
+        {
+            <div class="form-control">
+                <label>StudentName</label>
+                <input type="text" class="form-control" id="Studentname" name="Studentname" value="@Model.StudentName" />
+            </div>
+            <div class="form-control">
+                <label>Maths</label>
+                <input type="text" class="form-control" id="Math" name="Math" value="@Model.Math" />
+            </div>
+            <div class="form-control">
+                <label>Science</label>
+                <input type="text" class="form-control" id="Science" name="Science" value="@Model.Science" />
+            </div>
+            <div class="form-control">
+                <label>History</label>
+                <input type="text" class="form-control" id="History" name="History" value="@Model.History" />
+
+            </div>
+            <div class="form-control">
+                <label>Total</label>
+                <input type="text" class="form-control" id="Total" name="Total" value="@Model.Total" />
+            </div>
+            <div class="form-control">
+                <label>Percentage</label>
+                <input type="text" class="form-control" id="Percentage" name="Percentage" value="@Model.Percentage" />
+            </div>
+            <div class="form-control">
+                <label>Grade</label>
+                <input type="text" class="form-control" id="Grade" name="Grade" value="@Model.Grade" />
+            </div>
+          
+            <button type="submit" class="btn-info" id="add" value="add">Submit</button>
+
+
+        }
+
+
+    </div>
+    
+</body>
+</html>
